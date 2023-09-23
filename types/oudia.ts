@@ -1,4 +1,6 @@
-export type Ressya<T extends "Kudari" | "Nobori"> = {
+// @see https://github.com/route-builders/schema/blob/master/types/oudia.ts
+
+export type Ressya<T extends 'Kudari' | 'Nobori'> = {
   Houkou: string;
   Syubetsu: T;
   Ressyabangou: string;
@@ -8,14 +10,14 @@ export type Ressya<T extends "Kudari" | "Nobori"> = {
 
 export type Dia = {
   DiaName: string;
-  Kudari: { Ressya: Ressya<"Kudari">[] };
-  Nobori: { Ressya: Ressya<"Nobori">[] };
+  Kudari: { Ressya: Ressya<'Kudari'>[] };
+  Nobori: { Ressya: Ressya<'Nobori'>[] };
 };
 
 export const SenStyle = {
-  Hasen: "SenStyle_Hasen",
-  Jissen: "SenStyle_Jissen",
-  Ittensasen: "SenStyle_Ittensasen",
+  Hasen: 'SenStyle_Hasen',
+  Jissen: 'SenStyle_Jissen',
+  Ittensasen: 'SenStyle_Ittensasen',
 } as const;
 export type DiagramSenStyle = (typeof SenStyle)[keyof typeof SenStyle];
 
@@ -25,18 +27,17 @@ export type Ressyasyubetsu = {
   JikokuhyouFontIndex: string;
   DiagramSenColor: string;
   DiagramSenStyle: DiagramSenStyle;
-  DiagramSenIsBold?: "1";
+  DiagramSenIsBold?: '1';
   StopMarkDrawType: string;
 };
 
 export const Jikokukeisiki = {
-  NoboriChaku: "Jikokukeisiki_NoboriChaku",
-  Hatsuchaku: "Jikokukeisiki_Hatsuchaku",
-  Hatsu: "Jikokukeisiki_Hatsu",
-  KudariChaku: "Jikokukeisiki_KudariChaku",
+  NoboriChaku: 'Jikokukeisiki_NoboriChaku',
+  Hatsuchaku: 'Jikokukeisiki_Hatsuchaku',
+  Hatsu: 'Jikokukeisiki_Hatsu',
+  KudariChaku: 'Jikokukeisiki_KudariChaku',
 } as const;
-export type Ekijikokukeisiki =
-  (typeof Jikokukeisiki)[keyof typeof Jikokukeisiki];
+export type Ekijikokukeisiki = (typeof Jikokukeisiki)[keyof typeof Jikokukeisiki];
 
 export type Eki = {
   Ekimei: string;
@@ -52,6 +53,11 @@ export type Rosen = {
   KitenJikoku: string;
   DiagramDgrYZahyouKyoriDefault: string;
   Comment: string;
+};
+
+export type Oud = {
+  FileType: string;
+  Rosen: Rosen[];
   DispProp: {
     JikokuhyouFont: string[];
     JikokuhyouVFont: string;
@@ -67,9 +73,4 @@ export type Rosen = {
     JikokuhyouRessyaWidth: string;
   };
   FileTypeAppComment: string;
-};
-
-export type Oud = {
-  FileType: string;
-  Rosen: Rosen[];
 };
