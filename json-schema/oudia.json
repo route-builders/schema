@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "The JSON format of route-builders OudOperator",
+  "type": "object",
+  "properties": {
+    "FileType": {
+      "type": "string"
+    },
+    "Rosen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Rosenmei": {
+            "type": "string"
+          },
+          "Eki": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Ekimei": {
+                  "type": "string"
+                },
+                "Ekijikokukeisiki": {
+                  "type": "string"
+                },
+                "Ekikibo": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Ekimei",
+                "Ekijikokukeisiki",
+                "Ekikibo"
+              ]
+            }
+          },
+          "Ressyasyubetsu": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Syubetsumei": {
+                  "type": "string"
+                },
+                "JikokuhyouMojiColor": {
+                  "type": "string"
+                },
+                "JikokuhyouFontIndex": {
+                  "type": "string"
+                },
+                "DiagramSenColor": {
+                  "type": "string"
+                },
+                "DiagramSenStyle": {
+                  "type": "string"
+                },
+                "StopMarkDrawType": {
+                  "type": "string"
+                },
+                "Ryakusyou": {
+                  "type": "string"
+                },
+                "DiagramSenIsBold": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Syubetsumei",
+                "JikokuhyouMojiColor",
+                "JikokuhyouFontIndex",
+                "DiagramSenColor",
+                "DiagramSenStyle",
+                "StopMarkDrawType"
+              ]
+            }
+          },
+          "Dia": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "DiaName": {
+                  "type": "string"
+                },
+                "Kudari": {
+                  "type": "object",
+                  "properties": {
+                    "Ressya": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Houkou": {
+                            "type": "string"
+                          },
+                          "Syubetsu": {
+                            "type": "string"
+                          },
+                          "Ressyabangou": {
+                            "type": "string"
+                          },
+                          "Ressyamei": {
+                            "type": "string"
+                          },
+                          "EkiJikoku": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "Houkou",
+                          "Syubetsu",
+                          "Ressyabangou",
+                          "Ressyamei",
+                          "EkiJikoku"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "Ressya"
+                  ]
+                },
+                "Nobori": {
+                  "type": "object",
+                  "properties": {
+                    "Ressya": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Houkou": {
+                            "type": "string"
+                          },
+                          "Syubetsu": {
+                            "type": "string"
+                          },
+                          "Ressyabangou": {
+                            "type": "string"
+                          },
+                          "Ressyamei": {
+                            "type": "string"
+                          },
+                          "EkiJikoku": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "Houkou",
+                          "Syubetsu",
+                          "Ressyabangou",
+                          "Ressyamei",
+                          "EkiJikoku"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "Ressya"
+                  ]
+                }
+              },
+              "required": [
+                "DiaName",
+                "Kudari",
+                "Nobori"
+              ]
+            }
+          },
+          "KitenJikoku": {
+            "type": "string"
+          },
+          "DiagramDgrYZahyouKyoriDefault": {
+            "type": "string"
+          },
+          "Comment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Rosenmei",
+          "Eki",
+          "Ressyasyubetsu",
+          "Dia",
+          "KitenJikoku",
+          "DiagramDgrYZahyouKyoriDefault",
+          "Comment"
+        ]
+      }
+    },
+    "DispProp": {
+      "type": "object",
+      "properties": {
+        "JikokuhyouFont": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "JikokuhyouVFont": {
+          "type": "string"
+        },
+        "DiaEkimeiFont": {
+          "type": "string"
+        },
+        "DiaJikokuFont": {
+          "type": "string"
+        },
+        "DiaRessyaFont": {
+          "type": "string"
+        },
+        "CommentFont": {
+          "type": "string"
+        },
+        "DiaMojiColor": {
+          "type": "string"
+        },
+        "DiaHaikeiColor": {
+          "type": "string"
+        },
+        "DiaRessyaColor": {
+          "type": "string"
+        },
+        "DiaJikuColor": {
+          "type": "string"
+        },
+        "EkimeiLength": {
+          "type": "string"
+        },
+        "JikokuhyouRessyaWidth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "JikokuhyouFont",
+        "JikokuhyouVFont",
+        "DiaEkimeiFont",
+        "DiaJikokuFont",
+        "DiaRessyaFont",
+        "CommentFont",
+        "DiaMojiColor",
+        "DiaHaikeiColor",
+        "DiaRessyaColor",
+        "DiaJikuColor",
+        "EkimeiLength",
+        "JikokuhyouRessyaWidth"
+      ]
+    },
+    "FileTypeAppComment": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "FileType",
+    "Rosen",
+    "DispProp",
+    "FileTypeAppComment"
+  ]
+}
